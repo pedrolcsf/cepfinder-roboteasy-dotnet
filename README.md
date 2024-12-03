@@ -25,7 +25,7 @@ O **CEP Finder** foi desenvolvido para o teste técnico Roboteasy.
 
 ### Backend
 - C# 11
-- ASP.NET Core 8
+- ASP.NET Core
 - REST API
 - .NET CLI
 
@@ -56,7 +56,7 @@ O **CEP Finder** foi desenvolvido para o teste técnico Roboteasy.
 ## **Requisitos**
 
 - **Docker** (opcional, para execução conteinerizada)
-- **.NET SDK 8.0+** (para execução manual do backend)
+- **.NET SDK 9.0+** (para execução manual do backend)
 - **Node.js 16+** e **npm** (para execução manual do frontend)
 
 ---
@@ -81,7 +81,7 @@ O **CEP Finder** foi desenvolvido para o teste técnico Roboteasy.
 ### **Execução Manual**
 
 #### **Backend**
-1. Certifique-se de ter o **.NET SDK 8.0+** instalado.
+1. Certifique-se de ter o **.NET SDK 9.0+** instalado.
 2. Navegue para a pasta do backend:
    ```bash
    cd backend
