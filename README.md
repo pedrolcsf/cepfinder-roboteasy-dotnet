@@ -24,7 +24,7 @@ O **CEP Finder** foi desenvolvido para o teste técnico Roboteasy.
 ## **Tecnologias Utilizadas**
 
 ### Backend
-- C# 11
+- C#
 - ASP.NET Core
 - REST API
 - .NET CLI
