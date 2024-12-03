@@ -29,7 +29,6 @@ namespace CepFinder.Controllers
             if (string.IsNullOrEmpty(cep) || cep.Length != 8)
                 return BadRequest("O CEP deve ter 8 caracteres.");
 
-            // Fazendo a consulta ao serviço ViaCEP
             var response = await _httpClient.GetAsync($"https://viacep.com.br/ws/{cep}/json/");
 
             if (!response.IsSuccessStatusCode)
@@ -38,13 +37,13 @@ namespace CepFinder.Controllers
             var endereco = await response.Content.ReadAsStringAsync();
             var cacheEntryOptions = new MemoryCacheEntryOptions
             {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10), // Duração do cache
-                SlidingExpiration = TimeSpan.FromMinutes(5) // Renova se acessado
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10),
+                SlidingExpiration = TimeSpan.FromMinutes(5)
             };
 
             _cache.Set(cep, endereco, cacheEntryOptions);
-            
-            return Ok(endereco); // Retorna o endereço em formato JSON
+
+            return Ok(endereco);
         }
     }
 }
